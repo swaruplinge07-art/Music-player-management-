@@ -203,7 +203,7 @@ async function generateDocx() {
                 spacing: { after: 120 },
                 children: [
                   new TextRun({
-                    text: 'Rhythm Box — Algorithmic Audio Platform & DSA Showcase',
+                    text: 'Rhythm Box — Algorithmic Audio Platform & DSA Showcase (Joint Project Report)',
                     size: 16,
                     color: COLOR_MUTED,
                     font: 'Arial'
@@ -220,7 +220,7 @@ async function generateDocx() {
                 alignment: AlignmentType.SPACE_BETWEEN,
                 children: [
                   new TextRun({
-                    text: 'CS-302 / Data Structures & Algorithms Lab Report',
+                    text: 'CS-302 / Data Structures & Algorithms Lab Report (Team of 2)',
                     size: 16,
                     color: COLOR_MUTED,
                     font: 'Arial'
@@ -319,7 +319,7 @@ async function generateDocx() {
             ]
           }),
           new Paragraph({
-            spacing: { before: 60, after: 480 },
+            spacing: { before: 60, after: 400 },
             alignment: AlignmentType.CENTER,
             children: [
               new TextRun({
@@ -331,33 +331,46 @@ async function generateDocx() {
               })
             ]
           }),
+          new Paragraph({
+            spacing: { before: 0, after: 360 },
+            alignment: AlignmentType.CENTER,
+            children: [
+              new TextRun({
+                text: '[ Collaborative Pair Engineering Project — Team of 2 Candidates ]',
+                bold: true,
+                size: 20,
+                color: COLOR_SUCCESS,
+                font: 'Arial'
+              })
+            ]
+          }),
 
-          // Metadata Table
+          // Metadata Table (Team of 2)
           new Table({
             width: { size: 100, type: WidthType.PERCENTAGE },
             rows: [
               new TableRow({
                 children: [
-                  createCell('Project Attribute', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 35 }),
-                  createCell('Specification / Submission Details', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 65 })
+                  createCell('Project Attribute', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 32 }),
+                  createCell('Specification / Submission Details', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 68 })
                 ]
               }),
               new TableRow({
                 children: [
-                  createCell('Candidate Name', { bold: true, bg: COLOR_BG_LIGHT }),
-                  createCell('Swarup Linge', { bold: true, color: COLOR_DARK })
+                  createCell('Project Title', { bold: true, bg: COLOR_BG_LIGHT }),
+                  createCell('RHYTHM BOX: Algorithmic Audio Platform & DSA Showcase', { bold: true })
                 ]
               }),
               new TableRow({
                 children: [
-                  createCell('Roll Number', { bold: true }),
-                  createCell('24', { bold: true })
+                  createCell('Candidate 1 (Team Member)', { bold: true }),
+                  createCell('Swarup Linge\nRoll Number: 24 | SAP ID: 70012023001', { bold: true, color: COLOR_DARK })
                 ]
               }),
               new TableRow({
                 children: [
-                  createCell('SAP ID', { bold: true, bg: COLOR_BG_LIGHT }),
-                  createCell('70012023001', { bold: true })
+                  createCell('Candidate 2 (Team Member & Co-Author)', { bold: true, bg: COLOR_BG_LIGHT }),
+                  createCell('[Project Partner / Co-Developer Name]\nRoll Number: [Partner Roll No.] | SAP ID: [Partner SAP ID]', { bold: true, color: COLOR_DARK })
                 ]
               }),
               new TableRow({
@@ -369,13 +382,13 @@ async function generateDocx() {
               new TableRow({
                 children: [
                   createCell('Department', { bold: true, bg: COLOR_BG_LIGHT }),
-                  createCell('Computer Science & Engineering')
+                  createCell('Department of Computer Science & Engineering')
                 ]
               }),
               new TableRow({
                 children: [
-                  createCell('Submission Date', { bold: true }),
-                  createCell('September 30, 2026')
+                  createCell('Academic Year & Date', { bold: true }),
+                  createCell('Academic Year 2026-2027 | Submission Date: September 30, 2026')
                 ]
               }),
               new TableRow({
@@ -399,11 +412,62 @@ async function generateDocx() {
             ]
           }),
 
+          // Joint Team Contribution & Responsibility Breakdown
           new Paragraph({
-            spacing: { before: 360, after: 120 },
+            spacing: { before: 300, after: 120 },
             children: [
               new TextRun({
-                text: 'Project Abstract & Declaration:',
+                text: 'Team Collaboration & Responsibility Matrix:',
+                bold: true,
+                size: 22,
+                color: COLOR_DARK
+              })
+            ]
+          }),
+
+          new Table({
+            width: { size: 100, type: WidthType.PERCENTAGE },
+            rows: [
+              new TableRow({
+                children: [
+                  createCell('Team Member', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 30 }),
+                  createCell('Primary DSA Architecture Modules & Engineering Responsibilities', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 70 })
+                ]
+              }),
+              new TableRow({
+                children: [
+                  createCell('Candidate 1:\nSwarup Linge\n(Roll: 24 | SAP: 70012023001)', { bold: true, bg: COLOR_BG_LIGHT }),
+                  createCell(
+                    '• Doubly Linked List Engine (O(1) next/prev pointer traversal & DLL HUD)\n' +
+                    '• FIFO Queue Buffer (O(1) Up Next scheduling with auto-dequeue on track end)\n' +
+                    '• LIFO History & Undo Engine (Command pattern with inverse stack operations)\n' +
+                    '• Trie Prefix Search Tree (O(L) instant autocomplete with sub-millisecond query)\n' +
+                    '• Audio Engine Integration (HTML5 direct playback & local MP3 bundling)\n' +
+                    '• Workstation UI Architecture & React 19 MusicPlayerContext State Coordination'
+                  )
+                ]
+              }),
+              new TableRow({
+                children: [
+                  createCell('Candidate 2:\n[Project Partner / Co-Developer]\n(Roll: [Partner Roll] | SAP: [Partner SAP])', { bold: true }),
+                  createCell(
+                    '• Custom Hash Map Engine (djb2 hash function, prime-size table, separate chaining O(1) lookups)\n' +
+                    '• Binary Max-Heap Priority Queue (playCount indexing, siftUp/siftDown invariants, Top 5 Charts)\n' +
+                    '• Sorting Algorithms Suite (QuickSort Lomuto partition by Title & MergeSort by Duration)\n' +
+                    '• Graph & BFS Recommendation Engine (Adjacency list similarity graph, 2-hop BFS traversal)\n' +
+                    '• Interactive SVG Sonic Graph Canvas Visualizer Modal\n' +
+                    '• Comprehensive SRS & Test Case Execution Matrix (All 14 Test Cases verification)'
+                  )
+                ]
+              })
+            ]
+          }),
+
+          new Paragraph({
+            spacing: { before: 260, after: 120 },
+            children: [
+              new TextRun({
+                text: 'Joint Academic Declaration:',
                 bold: true,
                 size: 22,
                 color: COLOR_DARK
@@ -411,7 +475,7 @@ async function generateDocx() {
             ]
           }),
           createP(
-            'I hereby declare that this project titled "Rhythm Box: Algorithmic Audio Platform & DSA Showcase" has been designed, implemented, and tested independently by me as part of the CS-302 Data Structures and Algorithms curriculum. The application strictly rejects native array method shortcuts (such as Array.prototype.find, filter, sort, or slice) for all primary data operations, replacing them with custom zero-dependency implementations of Doubly Linked Lists, Queues, Stacks, Tries, Hash Maps, Binary Max-Heaps, QuickSort, MergeSort, and Graph Breadth-First Search.'
+            'We, the undersigned candidates (Swarup Linge and Project Partner), hereby declare that this laboratory project titled "Rhythm Box: Algorithmic Audio Platform & DSA Showcase" has been collaboratively designed, engineered, implemented, and verified by our pair team as part of the CS-302 Data Structures and Algorithms curriculum. We certify that our codebase completely rejects native array method shortcuts (such as Array.prototype.find, filter, sort, or slice) for all primary data operations, implementing all 8 data structures from first principles in vanilla TypeScript.'
           ),
 
           new Paragraph({ children: [new PageBreak()] }),
@@ -429,7 +493,7 @@ async function generateDocx() {
             'In conventional web applications, developers frequently rely on high-level array abstractions (such as Array.prototype.push, shift, filter, and sort). However, standard array shift/unshift and un-indexed linear scans incur an O(N) time complexity penalty. For large catalogs (e.g., 50,000+ tracks), linear search and naive array shifting introduce perceptible UI stutter, audio buffer under-runs, and frame drops below the requisite 60 FPS (16.67ms render budget).'
           ),
           createP(
-            'Rhythm Box resolves this fundamental engineering bottleneck by replacing all native data shortcuts with 8 custom, hand-crafted Data Structures and Algorithms (DSA) classes written in pure vanilla TypeScript. Every single transport control, queue modification, search keystroke, leaderboard reranking, and playlist sort maps directly to an optimal algorithmic class with mathematically guaranteed asymptotic time and space bounds.'
+            'Our team engineered Rhythm Box to resolve this fundamental computational bottleneck. By replacing all native shortcuts with 8 custom, hand-crafted Data Structures and Algorithms (DSA) classes written in pure vanilla TypeScript, every single transport control, queue modification, search keystroke, leaderboard reranking, and playlist sort maps directly to an optimal algorithmic class with mathematically guaranteed asymptotic time and space bounds.'
           ),
 
           createH2('1.2 Low-Level Algorithmic Table'),
@@ -610,7 +674,7 @@ async function generateDocx() {
 
           createH2('2.2 Structured Test Case Execution Matrix Table'),
           createP(
-            'The following matrix details the 14 comprehensive test cases executed against the Rhythm Box platform across all custom DSA modules. All test cases passed with 100% verification:'
+            'The following matrix details the 14 comprehensive test cases executed against the Rhythm Box platform across all custom DSA modules. All test cases were verified and passed jointly by our engineering team:'
           ),
 
           // Test Matrix Table
@@ -790,7 +854,7 @@ async function generateDocx() {
 
           createH2('3.1 Session Metadata & Cloud Archive Details'),
 
-          // Video Metadata Table
+          // Video Metadata Table (Joint Presentation)
           new Table({
             width: { size: 100, type: WidthType.PERCENTAGE },
             rows: [
@@ -814,8 +878,12 @@ async function generateDocx() {
               }),
               new TableRow({
                 children: [
-                  createCell('Presenter / Candidate', { bold: true, bg: COLOR_BG_LIGHT }),
-                  createCell('Swarup Linge (Roll: 24 | SAP ID: 70012023001)', { bold: true })
+                  createCell('Joint Presenters (Team of 2)', { bold: true, bg: COLOR_BG_LIGHT }),
+                  createCell(
+                    '1. Swarup Linge (Roll No: 24 | SAP ID: 70012023001)\n' +
+                    '2. [Project Partner / Co-Developer Name] (Roll No: [Partner Roll] | SAP ID: [Partner SAP])',
+                    { bold: true }
+                  )
                 ]
               }),
               new TableRow({
@@ -827,19 +895,19 @@ async function generateDocx() {
               new TableRow({
                 children: [
                   createCell('Recording Video File', { bold: true, bg: COLOR_BG_LIGHT }),
-                  createCell('DSA_RhythmBox_Presentation_SwarupLinge.mp4')
+                  createCell('DSA_RhythmBox_JointPresentation_SwarupLinge_Partner.mp4')
                 ]
               }),
               new TableRow({
                 children: [
                   createCell('Resolution & Format', { bold: true }),
-                  createCell('1080p Full HD (1920x1080), 60 FPS, AAC 320kbps Stereo Audio')
+                  createCell('1080p Full HD (1920x1080), 60 FPS, AAC 320kbps Dual-Channel Stereo')
                 ]
               }),
               new TableRow({
                 children: [
                   createCell('Total Video Duration', { bold: true, bg: COLOR_BG_LIGHT }),
-                  createCell('07:00 Minutes (Strictly timed presentation script)')
+                  createCell('07:00 Minutes (Joint structured demonstration script)')
                 ]
               }),
               new TableRow({
@@ -857,9 +925,9 @@ async function generateDocx() {
             ]
           }),
 
-          createH2('3.2 Video Presentation Script & Timestamp Log'),
+          createH2('3.2 Video Presentation Script & Timestamp Log (Dual-Speaker)'),
           createP(
-            'The presentation video strictly follows a structured 7-minute chronological script, demonstrating each custom data structure live inside the running application:'
+            'The presentation video strictly follows a structured 7-minute chronological script, with duties divided equally between both candidates to demonstrate each custom data structure live inside the running application:'
           ),
 
           // Timestamp Log Table
@@ -868,55 +936,62 @@ async function generateDocx() {
             rows: [
               new TableRow({
                 children: [
-                  createCell('Timestamp', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 15 }),
-                  createCell('Phase / Segment', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 22 }),
-                  createCell('Live Screen Action & Demonstration', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 33 }),
-                  createCell('Core DSA Explanations & Theory', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 30 })
+                  createCell('Timestamp', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 14 }),
+                  createCell('Presenter', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 16 }),
+                  createCell('Phase / Segment', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 18 }),
+                  createCell('Live Screen Action & Demonstration', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 28 }),
+                  createCell('Core DSA Explanations & Theory', { bold: true, bg: COLOR_HEADER_BG, color: 'FFFFFF', width: 24 })
                 ]
               }),
               new TableRow({
                 children: [
                   createCell('00:00 - 00:45', { bold: true, bg: COLOR_BG_LIGHT }),
-                  createCell('Introduction & Overview', { bold: true }),
-                  createCell('Candidate on webcam; displays cover slide, project title, and terminal showing Vite dev server running at localhost:5173.'),
-                  createCell('States candidate details (Swarup Linge, SAP: 70012023001) and introduces the core philosophy: zero native array shortcuts.')
+                  createCell('Swarup Linge &\nPartner', { bold: true, color: COLOR_DARK }),
+                  createCell('Joint Team Intro & Vision', { bold: true }),
+                  createCell('Both team members on dual webcams; display cover slide, project title, and terminal showing Vite dev server running at localhost:5173.'),
+                  createCell('Introduce candidate credentials, division of engineering roles, and our team philosophy: zero native array shortcuts.')
                 ]
               }),
               new TableRow({
                 children: [
                   createCell('00:45 - 01:30', { bold: true }),
+                  createCell('Swarup Linge', { bold: true, color: COLOR_PRIMARY }),
                   createCell('Problem Definition', { bold: true }),
-                  createCell('Shows Spotify dark-themed UI; opens Chrome DevTools performance monitor.'),
-                  createCell('Explains why commercial audio players need O(1) transitions instead of O(N) array shifts; maps music operations to 8 DSA concepts.')
+                  createCell('Displays dark-themed UI; opens Chrome DevTools performance monitor showing frame timing.'),
+                  createCell('Explains why audio players require O(1) transitions instead of O(N) array shifts; maps music operations to 8 DSA concepts.')
                 ]
               }),
               new TableRow({
                 children: [
                   createCell('01:30 - 02:30', { bold: true, bg: COLOR_BG_LIGHT }),
+                  createCell('Swarup Linge', { bold: true, color: COLOR_PRIMARY }),
                   createCell('Doubly Linked List & FIFO Queue', { bold: true }),
-                  createCell('Clicks Next/Previous buttons on Player Deck; observes rotating vinyl and DLL pointer HUD; enqueues 2 songs into Up Next queue.'),
-                  createCell('Explains SongNode prev/next pointers delivering O(1) bidirectional traversal; demonstrates FIFO Queue.dequeue() priority on song finish.')
+                  createCell('Clicks Next/Previous on Player Deck; observes rotating vinyl and DLL pointer HUD; enqueues 2 songs into Up Next queue.'),
+                  createCell('Explains SongNode prev/next pointers delivering O(1) traversal; demonstrates FIFO Queue.dequeue() priority on song finish.')
                 ]
               }),
               new TableRow({
                 children: [
                   createCell('02:30 - 03:30', { bold: true }),
+                  createCell('Swarup & Partner\n(Joint handoff)', { bold: true, color: COLOR_DARK }),
                   createCell('Trie Search & Custom Hash Map', { bold: true }),
-                  createCell('Types "algo", "synth", "hard" into Trie search terminal; toggles heart icon on multiple tracks in library table.'),
-                  createCell('Breaks down Trie prefix traversal in O(L) time vs linear O(N) scans; explains djb2 separate chaining hash map delivering O(1) favorites lookup.')
+                  createCell('Swarup types "algo", "chill" into Trie search; Partner takes over screen and toggles heart icon on multiple tracks in library table.'),
+                  createCell('Swarup explains Trie prefix traversal in O(L) time; Partner details djb2 separate chaining hash map delivering O(1) favorites lookup.')
                 ]
               }),
               new TableRow({
                 children: [
                   createCell('03:30 - 04:30', { bold: true, bg: COLOR_BG_LIGHT }),
+                  createCell('Project Partner', { bold: true, color: COLOR_SUCCESS }),
                   createCell('Max-Heap Charts & Sorting', { bold: true }),
                   createCell('Plays song-4 repeatedly; watches Top Charts leaderboard reorder in real-time; selects QuickSort then MergeSort in table.'),
-                  createCell('Illustrates Binary Max-Heap siftUp() property maintaining O(log N) chart priority; explains Lomuto partitioning vs stable merge sorting.')
+                  createCell('Illustrates Binary Max-Heap siftUp() property maintaining O(log N) chart priority; explains Lomuto title partition vs MergeSort.')
                 ]
               }),
               new TableRow({
                 children: [
                   createCell('04:30 - 05:30', { bold: true }),
+                  createCell('Project Partner', { bold: true, color: COLOR_SUCCESS }),
                   createCell('Graph & BFS Recommendations', { bold: true }),
                   createCell('Selects ambient track; inspects "Recommended For You" shelf; clicks "Show Song Relationship Graph" to open SVG modal.'),
                   createCell('Explains Adjacency List graph structure with genre/tempo weighted edges; traces BFS queue traversal up to 2 hops of depth [O(V + E)].')
@@ -925,6 +1000,7 @@ async function generateDocx() {
               new TableRow({
                 children: [
                   createCell('05:30 - 06:15', { bold: true, bg: COLOR_BG_LIGHT }),
+                  createCell('Swarup Linge', { bold: true, color: COLOR_PRIMARY }),
                   createCell('Custom Audio Ingestion', { bold: true }),
                   createCell('Clicks "Insert Audio File" on Player Deck; selects local MP3; observes instantaneous playback and multi-DSA toast notifications.'),
                   createCell('Highlights simultaneous insertion across DLL O(1), Trie O(L), HashMap O(1), MaxHeap O(log N), and Graph O(1) in a single unified pipeline.')
@@ -933,9 +1009,10 @@ async function generateDocx() {
               new TableRow({
                 children: [
                   createCell('06:15 - 07:00', { bold: true }),
-                  createCell('Undo Engine, Tests & Conclusion', { bold: true }),
+                  createCell('Swarup Linge &\nPartner', { bold: true, color: COLOR_DARK }),
+                  createCell('Undo Stack, Tests & Sign-off', { bold: true }),
                   createCell('Deletes track from playlist; clicks "Undo Last Action" to watch it instantly restore; displays passing test suite in terminal.'),
-                  createCell('Explains LIFO Undo Stack command pattern; summarizes test matrix (all 14 passed); delivers concluding remarks and formal sign-off.')
+                  createCell('Partner summarizes LIFO Undo Stack command pattern; Swarup presents test matrix (all 14 passed); delivers joint closing remarks.')
                 ]
               })
             ]
@@ -943,10 +1020,10 @@ async function generateDocx() {
 
           createH2('3.3 Evaluation Summary & Self-Assessment'),
           createP(
-            'The demonstration video comprehensively verifies that Rhythm Box successfully fulfills all academic, algorithmic, and software engineering criteria for the CS-302 laboratory project. All 8 custom data structures operate harmoniously without regression, producing a responsive, educational, and mathematically rigorous music player.'
+            'The demonstration video comprehensively verifies that our collaborative project Rhythm Box successfully fulfills all academic, algorithmic, and software engineering criteria for the CS-302 laboratory project. All 8 custom data structures operate harmoniously without regression, producing a responsive, educational, and mathematically rigorous music player.'
           ),
 
-          // Signature Box
+          // Double Student Signatures & Faculty Signature Box
           new Paragraph({ spacing: { before: 360, after: 120 } }),
           new Table({
             width: { size: 100, type: WidthType.PERCENTAGE },
@@ -957,15 +1034,29 @@ async function generateDocx() {
                     [
                       new Paragraph({
                         children: [
-                          new TextRun({ text: 'Candidate Signature:', bold: true, size: 20 }),
+                          new TextRun({ text: 'Candidate 1 Signature:', bold: true, size: 20 }),
                           new TextRun({ text: '\n\n\n___________________________________\n', bold: true }),
                           new TextRun({ text: 'Swarup Linge\n', bold: true }),
                           new TextRun({ text: 'Roll No: 24 | SAP ID: 70012023001\n' }),
-                          new TextRun({ text: 'Department of Computer Science & Engineering' })
+                          new TextRun({ text: 'Dept of Computer Science & Engineering' })
                         ]
                       })
                     ],
-                    { width: 50, bg: COLOR_BG_LIGHT }
+                    { width: 33, bg: COLOR_BG_LIGHT }
+                  ),
+                  createCell(
+                    [
+                      new Paragraph({
+                        children: [
+                          new TextRun({ text: 'Candidate 2 Signature:', bold: true, size: 20 }),
+                          new TextRun({ text: '\n\n\n___________________________________\n', bold: true }),
+                          new TextRun({ text: '[Project Partner / Co-Developer]\n', bold: true }),
+                          new TextRun({ text: 'Roll No: [Partner Roll] | SAP ID: [Partner SAP]\n' }),
+                          new TextRun({ text: 'Dept of Computer Science & Engineering' })
+                        ]
+                      })
+                    ],
+                    { width: 33, bg: COLOR_BG_LIGHT }
                   ),
                   createCell(
                     [
@@ -975,11 +1066,11 @@ async function generateDocx() {
                           new TextRun({ text: '\n\n\n___________________________________\n', bold: true }),
                           new TextRun({ text: 'Evaluator / Committee Member\n', bold: true }),
                           new TextRun({ text: 'CS-302 DSA Laboratory Examination\n' }),
-                          new TextRun({ text: 'Date of Evaluation: _______________' })
+                          new TextRun({ text: 'Date: ________________________' })
                         ]
                       })
                     ],
-                    { width: 50, bg: COLOR_BG_LIGHT }
+                    { width: 34, bg: COLOR_BG_LIGHT }
                   )
                 ]
               })
