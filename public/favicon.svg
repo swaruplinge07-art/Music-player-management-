@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="rbFavGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F59B" />
+      <stop offset="50%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="rbFavTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+  <path d="M24 5L41.3 15L24 25L6.7 15L24 5Z" fill="url(#rbFavTop)" stroke="url(#rbFavGrad)" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M6.7 15V33L24 43V25L6.7 15Z" fill="#0A0E17" stroke="url(#rbFavGrad)" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M41.3 15V33L24 43V25L41.3 15Z" fill="#131B2B" stroke="url(#rbFavGrad)" stroke-width="2.5" stroke-linejoin="round" />
+  <g transform="translate(24, 23)">
+    <rect x="-11" y="-8" width="3.2" height="16" rx="1.6" fill="#00F59B" />
+    <rect x="-5.2" y="-13" width="3.2" height="26" rx="1.6" fill="#00F59B" />
+    <rect x="0.6" y="-18" width="3.6" height="36" rx="1.8" fill="#00E5FF" />
+    <rect x="6.8" y="-11" width="3.2" height="22" rx="1.6" fill="#38BDF8" />
+  </g>
+  <circle cx="24" cy="24" r="2.5" fill="#FFFFFF" />
+</svg>
