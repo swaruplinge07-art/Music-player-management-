@@ -972,9 +972,46 @@ async function generateDocx() {
             ]
           }),
 
-          createH2('3.2 Chronological Video Script & Timestamp Log'),
+          createH2('3.2 Ultra-Fast 2 to 3 Minute Live Meeting Script (Rapid Demo)'),
           createP(
-            'The presentation video strictly follows a structured 7-minute chronological script, with duties divided equally between both candidates to demonstrate each custom data structure live inside the running application:'
+            'Designed specifically for accelerated viva examinations and brief 2 to 3 minute faculty reviews. Delivers high-density technical proof across all 8 custom DSA structures in under 150 seconds:'
+          ),
+
+          createH3('Segment 1: Hook & Core Mandate (00:00 - 00:25) [25s]'),
+          createDialogue('Live Action', 'Share screen displaying Rhythm Box at http://localhost:5173. Point to spinning vinyl, dark theme, and telemetry HUD.', true),
+          createDialogue('Swarup Linge', 'Good morning / afternoon, sir! I am Swarup Linge (Roll No: 24), and this is my project partner [Friend\'s Name]. Today we present Rhythm Box—a Spotify-inspired music platform where every core feature is powered by custom Data Structures & Algorithms without using native array shortcuts.'),
+          createDialogue('Project Partner', 'In standard web apps, naive array operations like shift() or linear search cause an O(N) lag. In Rhythm Box, we built 8 custom DSA classes from first principles in pure TypeScript to achieve optimal O(1), O(L), and O(log N) performance.'),
+
+          createH3('Segment 2: Traversal & Up Next Queue (00:25 - 00:55) [30s]'),
+          createDialogue('Live Action', 'Swarup clicks Next Track button and points to the live DLL Pointer HUD.', true),
+          createDialogue('Swarup Linge', 'First, playlist navigation: In DoublyLinkedList.ts, our SongNode holds explicit prev and next pointers. When I click Next, it dereferences current.next in strictly O(1) time—no array scanning, zero lag, as verified in our live HUD.'),
+          createDialogue('Live Action', 'Partner clicks Add to Queue on 2 songs and opens the Up Next drawer.', true),
+          createDialogue('Project Partner', 'Second, our Up Next FIFO Queue in Queue.ts. It has explicit head and tail pointers. Enqueuing runs in O(1), and when a song ends, the queue automatically dequeues before the playlist resumes.'),
+
+          createH3('Segment 3: Instant Search & Favorites (00:55 - 01:25) [30s]'),
+          createDialogue('Live Action', 'Swarup clicks Search bar and types "a-l-g-o".', true),
+          createDialogue('Swarup Linge', 'Third, instant search: In Trie.ts, we engineered a 26-ary character Prefix Tree. As I type "algo", notice the response time badge: 0.3 milliseconds! Because it traverses in strictly O(L) time (L = query length), completely independent of catalog size.'),
+          createDialogue('Live Action', 'Partner clicks the heart icon on 2 tracks in the table.', true),
+          createDialogue('Project Partner', 'Fourth, Favorites: In CustomHashMap.ts, we built our own Hash Table using the polynomial djb2 hash algorithm with separate chaining. Toggling favorites and metadata lookups takes strictly O(1) average time.'),
+
+          createH3('Segment 4: Dynamic Charts, Sorting & Recommendations (01:25 - 01:55) [30s]'),
+          createDialogue('Live Action', 'Partner clicks play on track 4 twice, pointing to the Top Charts shelf.', true),
+          createDialogue('Project Partner', 'Fifth, trending analytics: In MaxHeap.ts, a Binary Max-Heap keyed on playCount executes siftUp() in O(log N) time, automatically bubbling played tracks into the Top Charts without re-sorting the catalog! Sixth, for library sorting, we implemented custom in-place QuickSort and MergeSort in O(N log N).'),
+          createDialogue('Live Action', 'Swarup clicks Show Song Relationship Graph.', true),
+          createDialogue('Swarup Linge', 'Seventh, recommendations: In Graph.ts, an Adjacency List Graph connects songs sharing genres and tempo, executing Breadth-First Search (BFS) up to 2 hops of depth in O(V + E) time to populate recommendations.'),
+
+          createH3('Segment 5: Showstopper Demo — Custom Audio Ingestion & Undo (01:55 - 02:25) [30s]'),
+          createDialogue('Live Action', 'Partner clicks Insert Audio File on Player Deck, selects an MP3 file.', true),
+          createDialogue('Project Partner', 'Now, our showstopper: I will upload a local MP3 file. Watch how it simultaneously propagates into all 8 custom DSA structures in real-time—DLL append O(1), Trie index O(L), HashMap put O(1), MaxHeap insert O(log N), and Graph link—playing immediately with full HTML5 audio!'),
+          createDialogue('Live Action', 'Swarup deletes a song from the table, then clicks Undo Last Action.', true),
+          createDialogue('Swarup Linge', 'And eighth, our LIFO Undo Engine in Stack.ts stores inverse delta commands, popping in O(1) to restore deleted tracks at their exact original index. All 14 automated test cases passed, and the production build is under 105 KB gzip!'),
+
+          createH3('Segment 6: Concluding Handover (02:25 - 02:35) [10s]'),
+          createDialogue('Swarup & Partner', 'In summary, Rhythm Box proves how classical computer science structures power real-world multimedia applications. Thank you, professors! We are now ready for your questions.'),
+
+          createH2('3.3 Detailed 7-Minute Chronological Walkthrough & Timestamp Log'),
+          createP(
+            'The comprehensive presentation breakdown follows a structured 7-minute chronological script, with duties divided equally between both candidates:'
           ),
 
           // Timestamp Log Table
